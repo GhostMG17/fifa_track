@@ -232,6 +232,8 @@ public class FifaBot extends TelegramLongPollingBot {
                     .append("\n💀 Лузер: ").append(result.getLoser());
 
             sendMessage(chatId, msg.toString());
+        } catch (org.springframework.web.client.HttpServerErrorException e) {
+            sendMessage(chatId, "📭 Нет матчей за указанный период (" + period + ").");
         } catch (Exception e) {
             sendMessage(chatId, "❌ Ошибка при получении статистики: " + e.getMessage());
         }
