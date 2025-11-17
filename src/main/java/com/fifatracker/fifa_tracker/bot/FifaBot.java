@@ -153,7 +153,7 @@ public class FifaBot extends TelegramLongPollingBot {
 
         InlineKeyboardButton showStats = new InlineKeyboardButton("📊 Посмотреть статистику");
         showStats.setCallbackData("show_stats");
-
+        
         InlineKeyboardButton historyBtn = new InlineKeyboardButton("🕒 История матчей");
         historyBtn.setCallbackData("history_ask");
 
